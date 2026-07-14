@@ -16,7 +16,7 @@ This started as a Figma-to-code exercise (converting a design screen by screen i
 
 ## Features
 
-- **Auto-detect location** — On first load, automatically shows current weather based on the user's location
+- **Auto-detect location** — On first load, automatically shows current weather based on the user's location (requires the browser's location permission to be granted — denying it shows an error screen, since the app is scoped to start from the current location)
 - **Location search** — Search for weather by city or location name
 - **Current conditions** — View temperature, weather icon, and location details at a glance
 - **Detailed metrics** — See "feels like" temperature, humidity, wind speed, and precipitation
@@ -55,8 +55,8 @@ None needed — both Open-Meteo and BigDataCloud are called directly from the cl
 
 ## Usage
 
-1. On first load, the browser will ask for location permission. Allow it to see current weather for where you are.
-2. No location, or want somewhere else? Use the search bar to look up any city by name and pick it from the results.
+1. On first load, the browser will ask for location permission — **allow it**. The app is built to start from your current location; if you deny or dismiss the prompt, geolocation fails and an error screen is shown instead of the app.
+2. Once your location loads, use the search bar to look up any other city by name and pick it from the results.
 3. Scroll the daily forecast for the week ahead, and use the day dropdown in the hourly panel to jump between days.
 4. Open the Units dropdown in the header to switch the whole app between Metric/Imperial, or fine-tune temperature/wind/precipitation independently.
 
