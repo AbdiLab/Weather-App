@@ -6,7 +6,7 @@ A clean, fast weather app built with React + TypeScript.
 
 ![Weather Now screenshot](./src/assets/screenshots/desktop-design-metric.jpg)
 
-<!-- Live link: e.g. https://weather-now.your-domain.com -->
+**Live:** [abdilab.github.io/weather-app](https://abdilab.github.io/weather-app/)
 
 ## Overview
 
@@ -41,7 +41,7 @@ This started as a Figma-to-code exercise (converting a design screen by screen i
 Requires [Node.js](https://nodejs.org/).
 
 ```bash
-git clone <this-repo-url>
+git clone https://github.com/AbdiLab/weather-app.git
 cd weather-app
 npm install
 npm run dev

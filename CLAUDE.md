@@ -13,6 +13,7 @@ Figma file: `weather-app` (fileKey `50FODCFOVjYv6Rhh0prm9F`).
 - `npm run build` — type-check (`tsc -b`) then production build via Vite
 - `npm run lint` — run ESLint over the repo
 - `npm run preview` — preview the production build
+- `npm run deploy` — publish the existing `dist/` build to GitHub Pages via `gh-pages` (run `npm run build` first; `vite.config.ts`'s `base: "/weather-app/"` must match the Pages repo path)
 
 There is no test suite/runner configured in this project.
 
