@@ -119,7 +119,7 @@ export default function App() {
     <UnitsContext.Provider value={{ units, switchSystem, setUnits }}>
       <WeatherDataContext.Provider
         value={{ resetError, weatherData, isError, isLoading, getCoordinates }}>
-        <WeatherApp />;
+        <WeatherApp />
       </WeatherDataContext.Provider>
     </UnitsContext.Provider>
   );
