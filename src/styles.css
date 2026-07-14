@@ -1,0 +1,171 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("./assets/fonts/Bricolage_Grotesque/BricolageGrotesque-VariableFont_opsz,wdth,wght.ttf")
+    format("truetype");
+  font-weight: 200 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("./assets/fonts/DM_Sans/DMSans-VariableFont_opsz,wght.ttf") format("truetype");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("./assets/fonts/DM_Sans/DMSans-Italic-VariableFont_opsz,wght.ttf") format("truetype");
+  font-weight: 100 1000;
+  font-style: italic;
+  font-display: swap;
+}
+
+@layer base {
+  body {
+    @apply bg-neutral-900 text-white;
+  }
+
+  button {
+    border: none;
+    outline: none;
+    @apply cursor-pointer;
+  }
+}
+
+@theme {
+  --font-display: "Bricolage Grotesque", sans-serif;
+  --font-sans: "DM Sans", sans-serif;
+
+  --breakpoint-tablet: 48rem;
+  --breakpoint-desktop: 90rem;
+
+  --shadow-primary: 0 0 0 3px var(--color-neutral-900), 0 0 0 5px var(--color-neutral-0);
+
+  --color-neutral-900: #02012c;
+  --color-neutral-800: #262540;
+  --color-neutral-700: #302f4a;
+  --color-neutral-600: #3c3b5e;
+  --color-neutral-300: #acacb7;
+  --color-neutral-200: #d4d3d9;
+  --color-neutral-0: #ffffff;
+
+  --color-orange-500: #ff820a;
+
+  --color-blue-500: #4658d9;
+  --color-blue-700: #2b1b9c;
+
+  --spacing-0: 0rem;
+  --spacing-025: 0.125rem;
+  --spacing-050: 0.25rem;
+  --spacing-075: 0.375rem;
+  --spacing-100: 0.5rem;
+  --spacing-125: 0.625rem;
+  --spacing-150: 0.75rem;
+  --spacing-200: 1rem;
+  --spacing-250: 1.25rem;
+  --spacing-300: 1.5rem;
+  --spacing-400: 2rem;
+  --spacing-500: 2.5rem;
+  --spacing-600: 3rem;
+  --spacing-800: 4rem;
+  --spacing-1000: 5rem;
+  --spacing-1200: 6rem;
+  --spacing-1400: 7rem;
+  --spacing-1600: 8rem;
+  --spacing-1800: 8.75rem;
+
+  --radius-0: 0rem;
+  --radius-4: 0.25rem;
+  --radius-6: 0.375rem;
+  --radius-8: 0.5rem;
+  --radius-10: 0.625rem;
+  --radius-12: 0.75rem;
+  --radius-16: 1rem;
+  --radius-20: 1.25rem;
+  --radius-24: 1.5rem;
+  --radius-full: 62.4375rem;
+}
+
+@utility text-preset-1 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-style: italic;
+  font-size: 6rem;
+  line-height: 1;
+  letter-spacing: -0.125rem;
+}
+
+@utility text-preset-2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 3.25rem;
+  line-height: 1.2;
+}
+
+@utility text-preset-3 {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+@utility text-preset-4 {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 1.75rem;
+  line-height: 1.2;
+}
+
+@utility text-preset-5 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+@utility text-preset-5-medium {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+@utility text-preset-6 {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.2;
+}
+
+@utility text-preset-7 {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+@utility text-preset-8 {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.2;
+}
+
+@utility dropdown-btn {
+  &:hover {
+    background-color: var(--color-neutral-700);
+  }
+
+  &:focus-visible {
+    background-color: var(--color-neutral-700);
+    outline: none;
+    box-shadow:
+      0px 0px 0px 2px var(--color-neutral-800),
+      0px 0px 0px 3px var(--color-neutral-0);
+  }
+}
