@@ -47,6 +47,14 @@ React Compiler (`babel-plugin-react-compiler`, wired up in `vite.config.ts` via 
 - `src/utils/toFixed.ts` — rounds a number to a whole-number string for display (e.g. temperatures, humidity).
 - `src/components/Icons.tsx` — the single, central export point for all *inline SVG* icons (search/dropdown/check/spinner/ban/retry/units), each typed with `SVGProps<SVGSVGElement>`, colored via `currentColor` and sized/colored by the caller through `className`. Weather-condition icons are a separate system (raster `.webp` files served from `public/images/`, not part of `Icons.tsx`).
 
+### Known limitations (don't rediscover these — fix only if asked)
+
+- `isError` conflates geolocation and fetch failures (see above) — Retry always re-runs geolocation, and Search is unreachable during any error state.
+- No request cancellation on `handleFetch` — rapid unit toggles or successive city searches can let a stale response overwrite a newer one.
+- No persisted location — every page load re-requests geolocation instead of remembering the last-known coordinates.
+- Every unit change refetches the BigDataCloud reverse-geocode lookup even when the location hasn't changed.
+- The weather-icon `src`/`alt` construction (`getWeatherIconName` + template string) is duplicated identically in `WeatherInfo.tsx`, `DailyForecast.tsx`, and `HourlyForecast.tsx` instead of one shared helper.
+
 ## File Structure
 
 - `src/pages/WeatherApp.tsx` — the page, composes sections
